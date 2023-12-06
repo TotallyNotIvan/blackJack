@@ -15,6 +15,9 @@ body {
 .header span{
     padding: 0;
 }
+.heading{
+    font-size: 2rem;
+}
 /* @media screen and (max-width: 670px){
     .title{
         font-size: 10vmax;
@@ -36,6 +39,11 @@ body {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+}
+.grid-container2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     justify-items: center;
 }
 .card{
@@ -81,9 +89,7 @@ body {
     grid-column: span 2;
 }
 #wl{
-    position: absolute;
-    padding-left: 45%;
-    font-size: 3vmax;
+    position: relative;
 }
 
 
