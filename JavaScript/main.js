@@ -163,15 +163,20 @@ function deal(){
     // }else if(cash==0){
     //     poor();
     // }
-    }
-    else{
+    }else{
         bet=cash;
         document.getElementById('bet').innerHTML = bet; 
     }
+    // if(cash==0){
+    //     poor()
+    // }
 }
 // function poor(){
-//     // display no money popup
-//     // have a reset button
+//     if (confirm('you ran out of money, would you like to barrow $1000 from my uncle?')) {
+//         cash=$1000
+//       } else {
+        
+//       }
 // }
 function betUp(){
     if (cash>bet){
@@ -217,10 +222,10 @@ function hit(){
         }else if (handone2==12){
             handone2= "J";
             handoneValue = handoneValue+10;
-        }else if (handone==11){
+        }else if (handone2==11){
             handone2= "Q";
             handoneValue = handoneValue+10;
-        }
+        }//Here was the 11 bug.
         else{
             handoneValue = handoneValue+handone2;
         }
@@ -666,6 +671,14 @@ function dealhit(){
         dealerAce--;
     }
 }
+function navToggle() { // creates a new function named navToggle
+    var x = document.getElementById("main-nav"); // creates a variable set to #main-nav
+      if (x.className === "topnav") { // if #main-nav has a class of .topnav,
+      x.className += " responsive";   // then add a new class
+    } else {                          // if it doesn't,
+      x.className = "topnav";         // set class to .topnav
+    } //closes if-else
+} //closes function
 // function win(){
 //     if(n<50){
 //         if(handoneValue > 21){
@@ -1218,12 +1231,3 @@ function dealhit(){
 //     document.getElementById(valuefinder).innerHTML = othercard;
 //     document.getElementById('othercardValue').innerHTML = othercardValue;
 // }
-
-function navToggle() { // creates a new function named navToggle
-    var x = document.getElementById("main-nav"); // creates a variable set to #main-nav
-      if (x.className === "topnav") { // if #main-nav has a class of .topnav,
-      x.className += " responsive";   // then add a new class
-    } else {                          // if it doesn't,
-      x.className = "topnav";         // set class to .topnav
-    } //closes if-else
-} //closes function
